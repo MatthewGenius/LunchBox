@@ -1,0 +1,7 @@
+const data2 = [
+    'I would reccomend you to eat energy bars. If you want other foods ask me again! Enjoy your food!',
+    'I would reccomend you to eat cookies with milk. They would help you to make you feel full. Enjoy your food',
+    'I would reccomend you to eat bread with tomato sauce. To make it, rip a bread and dip it into a plate of tomato sauce. Enjoy your food!',
+    'I would reccomend you to eat eggs with salt or potatos with sugar. It would make you feel better or good if you are hungry. Enjoy your food!',
+    'I would recommend you to eat ramen. I would only suggest you to eat this in a emergency. It is not that healthy for you, however you could eat it very easily and quickly. If you want other foods ask me again. Enjoy your food!'
+];
