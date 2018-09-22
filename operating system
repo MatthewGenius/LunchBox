@@ -1,0 +1,44 @@
+const handlers = {
+    'LaunchRequest': function () {
+        this.emit('GetNewFactIntent');
+    },
+    'GetNewRecipeIntent': function () {
+        const RecipeArr = data;
+        const RecipeIndex = Math.floor(Math.random() * RecipeArr.length);
+        const randomRecipe = RecipeArr[RecipeIndex];
+        const speechOutput = <s>GET_RECIPE_MESSAGE + randomRecipe</s>;
+        this.response.cardRenderer(SKILL_NAME, randomRecipe);
+        this.response.speak(speechOutput);
+        this.emit(':responseReady');
+    },
+    'GetAnotherRecipeIntent': function () {
+        const RecipeBrr = data2;
+        const RecipeIndex2 = Math.floor(Math.random() * RecipeBrr.length);
+        const nonrandomRecipe = RecipeBrr[RecipeIndex2];
+        const speechOutput2 = <s>Get_ANOTHER_RECIPE_MESSAGE + nonrandomRecipe</s>;
+        this.response.cardRenderer(SKILL_NAME, nonrandomRecipe);
+        this.response.speak(speechOutput2);
+        this.emit(':responseReady');
+    },
+    'AMAZON.HelpIntent': function () {
+        const speechOutput = HELP_MESSAGE;
+        const reprompt = HELP_REPROMPT;
+        this.response.speak(speechOutput).listen(reprompt);
+        this.emit(':responseReady');
+    },
+    'AMAZON.CancelIntent': function () {
+        this.response.speak(STOP_MESSAGE);
+        this.emit(':responseReady');
+    },
+    'AMAZON.StopIntent': function () {
+        this.response.speak(STOP_MESSAGE);
+        this.emit(':responseReady');
+    },
+};
+
+exports.handler = function (event, context, callback) {
+    const alexa = Alexa.handler(event, context, callback);
+    alexa.APP_ID = APP_ID;
+    alexa.registerHandlers(handlers);
+    alexa.execute();
+};
