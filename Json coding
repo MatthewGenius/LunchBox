@@ -1,0 +1,58 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "lunchbox",
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "GetNewRecipeIntent",
+                    "slots": [],
+                    "samples": [
+                        "tell me recipe",
+                        "tell me a simple recipe",
+                        "give me recipe",
+                        "give me a simple recipe",
+                        "give me some recipe",
+                        "tell me some easy recipe",
+                        "give me an easy recipe",
+                        "reccomend me a recipe"
+                    ]
+                },
+                {
+                    "name": "GetAnotherRecipeIntent",
+                    "slots": [],
+                    "samples": [
+                        "a food",
+                        "a simple food",
+                        "tell me a food",
+                        "tell me a simple food",
+                        "give me a food",
+                        "give me a simple food",
+                        "give me some food",
+                        "reccomend me a food"
+                    ]
+                }
+            ],
+            "types": []
+        }
+    }
+}
